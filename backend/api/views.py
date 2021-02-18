@@ -16,12 +16,7 @@ def measures(request):
     if request.method == "POST":
         if request.headers.get("Smarthouse-Tocken", None) != SMARTHOUSE_TOCKEN:
             return Response(status=status.HTTP_401_UNAUTHORIZED)
-        measure = MeasuresSerializer(data={
-            "temperature_in": request.data.get("temperature", None),
-            "pressure_in": request.data.get("pressure", None),
-            "humidity_in": request.data.get("humidity", None),
-            "moisture": request.data.get("moisture", None)
-        })
+        measure = MeasuresSerializer(data=request.data)
         if measure.is_valid():
             measure.save()
             return Response(measure.data, status=status.HTTP_201_CREATED)

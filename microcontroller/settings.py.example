@@ -1,0 +1,21 @@
+# Smarthouse api settings
+SMARTHOUSE_ENDPOINT = "https://smarthouse.yurin.space/api/measures/"
+SMARTHOUSE_TOCKEN = ""
+
+# Telegram settings
+TG_ENDPOINT = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s"
+TG_TOCKEN = ""
+TG_DEFAULT_CHAT = ""
+
+# WiFi
+WIFI_SSID = ""
+WIFI_PASSWORD = ""
+
+# Pins settings
+BME_IN_SCL = 22
+BME_IN_SDA = 21
+GROUND_ADC = 33
+
+# Measurements settings
+SENDING_DELTA = 60
+COUNT_FOR_AVERAGE = 2**5

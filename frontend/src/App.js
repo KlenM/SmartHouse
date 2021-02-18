@@ -7,9 +7,9 @@ import useGetFetch from './hooks/useGetFetch';
 
 
 function App() {
-  let [measures, refetchMeasures] = useGetFetch("http://127.0.0.1:8000/api/measures/", {"period": "48h"})
-  let [measuresNow, refetchNow] = useGetFetch("http://127.0.0.1:8000/api/measures/now/", {})
-  let [measuresAvg, refetchAvg] = useGetFetch("http://127.0.0.1:8000/api/measures/today/", {})
+  let [measures, refetchMeasures] = useGetFetch("/api/measures/", {"period": "48h"})
+  let [measuresNow, refetchNow] = useGetFetch("/api/measures/now/", {})
+  let [measuresAvg, refetchAvg] = useGetFetch("/api/measures/today/", {})
 
   useEffect(() => {
     setInterval(() => {refetchNow()}, 30000);
