@@ -1,0 +1,26 @@
+
+.measure {
+    text-align: center;
+    padding: 0.8em 2.2em;
+  }
+  
+  .measure > .value {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  
+  .measure > .value sup{
+    position: absolute;
+    font-size: 0.6rem;
+    margin-top: 0.4em;
+  }
+  
+  .measure > .avg {
+    padding: 0.2em 0;
+    font-size: 0.5rem;
+  }
+  
+  .measure .avg-value {
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
