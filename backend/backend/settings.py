@@ -22,7 +22,7 @@ SECRET_KEY = env.str('SECRET_KEY')
 SMARTHOUSE_TOCKEN = env.str('SMARTHOUSE_TOCKEN')
 DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'smarthouse.yurin.space']
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
