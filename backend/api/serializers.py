@@ -9,11 +9,11 @@ class RoundedFloatField(serializers.FloatField):
 
 class MeasuresSerializer(serializers.ModelSerializer):
     temperature_in = RoundedFloatField()
-    # temperature_out = RoundedFloatField()
+    temperature_out = RoundedFloatField()
     pressure_in = RoundedFloatField()
-    # pressure_out = RoundedFloatField()
+    pressure_out = RoundedFloatField()
     humidity_in = RoundedFloatField()
-    # humidity_out = RoundedFloatField()
+    humidity_out = RoundedFloatField()
     moisture = RoundedFloatField()
     
     class Meta:
@@ -21,11 +21,11 @@ class MeasuresSerializer(serializers.ModelSerializer):
         fields = [
             "date",
             "temperature_in",
-            # "temperature_out",
+            "temperature_out",
             "pressure_in",
-            # "pressure_out",
+            "pressure_out",
             "humidity_in",
-            # "humidity_out",
+            "humidity_out",
             "moisture"
         ]
     
