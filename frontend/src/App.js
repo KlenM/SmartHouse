@@ -12,8 +12,8 @@ function App() {
   let [measuresAvg, refetchAvg] = useGetFetch("/api/measures/today/", {})
 
   useEffect(() => {
-    setInterval(() => {refetchNow()}, 30000);
-    setInterval(() => {refetchMeasures()}, 30000);
+    setInterval(() => {refetchNow()}, 90000);
+    setInterval(() => {refetchMeasures()}, 90000);
     setInterval(() => {refetchAvg()}, 300000);
   }, [])
 
