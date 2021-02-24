@@ -12,9 +12,12 @@ wdt = machine.WDT(timeout=180000)
 
 try:
     wifi_connect(WIFI_SSID, WIFI_PASSWORD)
-    measures = Measures(COUNT_FOR_AVERAGE, SENDING_DELTA)
     while True:
-        api_send(measures.get_averaged_measures())
+        measures = Measures(COUNT_FOR_AVERAGE, SENDING_DELTA)
+        data = measures.get_averaged_measures()
+        del(measures)
+        gc.collect()
+        api_send(data)
         wdt.feed()
         gc.collect()
 except Exception as e:

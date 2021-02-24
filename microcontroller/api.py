@@ -6,14 +6,18 @@ from settings import SMARTHOUSE_ENDPOINT, SMARTHOUSE_TOCKEN
 
 
 def api_send(measures):
-    gc.collect()
     print(measures)
-    response = urequests.post(
-        SMARTHOUSE_ENDPOINT, 
-        json=measures, 
-        headers={
-            "Tocken-Smarthouse": SMARTHOUSE_TOCKEN
-        }).json()
+    gc.collect()
+    try:
+        response = urequests.post(
+            SMARTHOUSE_ENDPOINT, 
+            json=measures, 
+            headers={
+                "Smarthouse-Tocken": SMARTHOUSE_TOCKEN, 
+                "Content-Type": "application/json"
+            }).json()
+    except e:
+        logs_error(str(e))
     
     if response.get("status") == "error":
-        logs_info(response)
+        logs_error(response)
