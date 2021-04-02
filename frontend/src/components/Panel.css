@@ -1,33 +1,8 @@
 .panel {
-  display: flex;
+  float: left;
   width: 50%;
   height: 25%;
-}
-
-.panel h3 {
-  margin: 0.5em 1.5em;
-  font-weight: 500;
-}
-
-.panel > .info {
+  padding: 0.5em;
   display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-
-.panel > .info > .body {
-  align-self: center;
-  flex: 1;
-}
-
-.panel > .content {
-  display: none;
-  width: 70%;
-}
-
-@media(min-width: 600px) {
-  .panel > .content {
-    display: block;
-    padding: 0.2em;
-  }
+  justify-content: center;
 }

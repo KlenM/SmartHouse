@@ -1,0 +1,58 @@
+
+.info {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  flex: 2;
+}
+
+.info > .title {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.info > .data {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.625em;
+  margin-left: -0.15em;
+  left: 0; right: 0;
+
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.info > .data > sup {
+  position: absolute;
+  font-size: 0.6rem;
+  margin-top: 0.4em;
+}
+
+.info > .data > .description {
+  font-size: 0.6rem;
+  font-weight: normal;
+}
+
+.info > .data > .description > sup {
+  position: absolute;
+  margin-left: 0.1em;
+}
+
+@media screen and (max-height: 425px) {
+  .info > .title {
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    margin-top: -0.625em;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .info > .data {
+
+    margin-left: 40%;
+    font-size: 1.5em;
+  }
+}

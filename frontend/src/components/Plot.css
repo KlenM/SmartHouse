@@ -1,5 +1,14 @@
 .plot{
-    height: 100%;
-    width: 100%;
-    /* background-color: rgba(255, 255, 255, 0.02); */
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex: 3;
+  /* background-color: rgba(255, 255, 255, 0.02); */
+}
+
+
+@media screen and (min-height: 425px) and (min-width: 768px) {
+  .plot{
+    display: block;
   }
+}
