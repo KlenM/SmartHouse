@@ -1,5 +1,5 @@
 import gc
-import urequests
+from contrib import urequests
 from settings import TG_ENDPOINT, TG_DEFAULT_CHAT, TG_TOCKEN
 
 

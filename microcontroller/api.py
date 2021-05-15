@@ -1,5 +1,5 @@
 import gc
-import urequests
+from contrib import urequests
 
 from logs import logs_info
 from settings import SMARTHOUSE_ENDPOINT, SMARTHOUSE_TOCKEN
